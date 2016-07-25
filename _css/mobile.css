@@ -1,0 +1,47 @@
+@charset "utf-8";
+header {
+	width: 90%
+	padding: auto;
+	text-align: center;
+}
+header h1 {
+	padding-left: 0;
+}
+header nav {
+	display: block;
+	float:none;
+	padding: auto;
+}
+nav ul {
+	padding-left: 0;
+	padding-right: 0;
+}
+.toggle + a, .menu {
+	display: none;
+}
+.toggle {
+	display: block;
+}
+[id^=drop]:checked + ul { 
+display: block; 
+}
+nav ul li {
+	margin:auto;
+	width:50%;
+	display:block;
+
+}
+nav ul ul {
+	background:#CCC;
+	float: none;
+	position: static;
+	
+}
+nav ul li:hover > ul { display: none; }
+
+nav ul ul li {
+	width:100%;
+	display: block;
+	text-align:center;
+}
+	
