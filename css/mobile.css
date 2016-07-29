@@ -1,6 +1,6 @@
 @charset "utf-8";
 header {
-	width: 90%
+	width: 80%
 	padding: auto;
 	text-align: center;
 }
@@ -44,4 +44,16 @@ nav ul ul li {
 	display: block;
 	text-align:center;
 }
-	
+.photo {
+	width:100%;
+}
+.vertical {
+	width:100%;
+	max-height:none;
+}
+#social {
+	font-size:small;
+}
+#social i {
+	font-size:medium;
+}
