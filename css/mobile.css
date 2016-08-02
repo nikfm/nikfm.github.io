@@ -53,7 +53,9 @@ nav ul ul li {
 }
 #social {
 	font-size:small;
+	display:block;
 }
 #social i {
 	font-size:medium;
+	display:inline-block;
 }
