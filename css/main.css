@@ -44,7 +44,7 @@ nav ul {
 nav ul li {
 	display: inline-block;
 	padding-right: 0px;
-	margin-left: 20px;
+	margin-left: 10px;
 }
 
 nav ul li:hover {
@@ -94,10 +94,10 @@ a {
 h2 {
 	font-family: 'Josefin Sans', Geneva, Arial, sans-serif;
 	font-size:26px;
-	display: block;
+	display:block;
 	text-align: center;
 	padding-left: 0px;
-	margin-bottom:0px;
+	margin-bottom:10px;
 	margin-top:0px;
 }
 body {
@@ -176,6 +176,14 @@ div .photo p {
 div .music {
 	width:100%;
 	margin-bottom: 20px;
+}
+
+form {
+	text-align:center;
+	margin-bottom: 20px;
+}
+form table {
+	margin:auto;
 }
 
 /*figure { 

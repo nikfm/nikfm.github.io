@@ -24,6 +24,15 @@ nav ul {
 }
 [id^=drop]:checked + ul { 
 display: block; 
+vertical-align:middle;
+}
+nav label {
+	height:42px;
+	vertical-align:middle;
+}
+nav .fa {
+	vertical-align:middle;
+	/*vertical-align:text-bottom;*/
 }
 nav ul li {
 	margin:auto;
