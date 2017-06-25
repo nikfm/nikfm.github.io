@@ -1,0 +1,329 @@
+<html>
+
+<head>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link href="css/theme.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="inc/jquery-jvectormap-2.0.3.css" type="text/css" media="screen" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i|Open+Sans:100,300,400,600,700,700italic,600italic,400italic'" rel="stylesheet">
+	<script src="inc/jquery-3.2.1.min.js"></script>
+	<script src="inc/jquery-jvectormap-2.0.3.min.js"></script>
+	<script src="inc/jquery-jvectormap-africa-mill.js"></script>
+
+</head>
+
+<body>
+	<header>
+		<center>
+			<img class="logo" src="img/Tunatazama-logo.jpg" style="width:600px;">
+
+			<nav class="navbar-front">
+				<ul>
+					<li><a href="http://communitymonitors.net/indexcommnet.php/?page_id=18">About Us</a></li>
+					<li><a href="http://communitymonitors.net/indexcommnet.php/?p=4209">Resources</a></li>
+					<li><a href="http://communitymonitors.net/video">Video</a></li>
+					<li><a href="http://communitymonitors.net/indexcommnet.php/?page_id=29">Contact</a></li>
+				</ul>
+			</nav>
+
+
+		</center>
+	</header>
+	<center>
+		<span>Click on a country or circle below to visit that area's Community Monitors blog.</span>
+		<div id="world-map" style="width: 800px; height: 600px; margin-bottom:20px;"></div>
+		<script>
+			$(function() {
+				var red = '#dc2020';
+				var darkred = '#990000';
+				var darkblue ='#003366';
+				var green = '#005533';
+				var lightgrey = '#663434'; //red-grey
+				var grey = '#252524';
+
+				var red0 = '#660000';
+				var red1 = '#cb0000';
+				var red2 = '#EE4040';
+				var red3 = '#FF7b7b';
+
+
+				var map,
+					activeRegions = [
+						"AO", "BW", "CD", "LS", "MW", "MZ", "NA", "ZA", "SZ", "TZ", "ZM", "ZW"
+					],
+					regionInfo = {
+						'AO': {
+							"location": "http://example.com/ao"
+						},
+						'BW': {
+							"location": "http://example.com/bw"
+						},
+						'CD': {
+							"location": "http://example.com/bw"
+						},
+						'LS': {
+							"location": "http://example.com/bw"
+						},
+						'MW': {
+							"location": "http://example.com/bw"
+						},
+						'MZ': {
+							"location": "http://example.com/bw"
+						},
+						'NA': {
+							"location": "http://example.com/bw"
+						},
+						'ZA': {
+							"location": "http://example.com/bw"
+						},
+						'SZ': {
+							"location": "http://example.com/bw"
+						},
+						'TZ': {
+							"location": "http://example.com/bw"
+						},
+						'ZM': {
+							"location": "http://example.com/bw"
+						},
+						'ZW': {
+							"location": "http://example.com/bw"
+						}
+					},
+					markers = [{
+							latLng: [-26.20, 28.05],
+							name: 'Johannesburg',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=34"
+						},
+						{
+							latLng: [-26.17, 28.6], //should be -26.17, 28.35
+							name: 'Ekhuruleni',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=6"
+						},
+						{
+							latLng: [-28.45, 26.79],
+							name: 'Free State',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=8"
+						},
+						{
+							latLng: [-26.87, 26.66],
+							name: 'Klerksdorp',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=4"
+						},
+						{
+							latLng: [-23.4, 29.42],
+							name: 'Limpopo',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=5"
+						},
+						{
+							latLng: [-25.47, 30.99],
+							name: 'Mpumalanga',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=20"
+						},
+						{
+							latLng: [-25.66, 27.24],
+							name: 'Rustenburg',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=3"
+						},
+						{
+							latLng: [-27.06, 28.28],
+							name: 'Vaal',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=7"
+						},
+						{
+							latLng: [-16.17, 33.6],
+							name: 'Tete', //Mozambique
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=35"
+						},
+						{
+							latLng: [-19.4, 32], //estimate based on wikipedia
+							name: 'Marange', //Zimbabwe
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=36"
+						},
+						{
+							latLng: [-20.4, 15], //estimate based on wikipedia
+							name: 'Namib Example 1', //Namibia
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=36"
+						},
+						{
+							latLng: [-23.4, 18], //estimate based on wikipedia
+							name: 'Namib Example 2', //Namibia
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=36"
+						},
+						{
+							latLng: [-20.4, 25], //estimate based on wikipedia
+							name: 'Botsw Example 1',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=36"
+						},
+						{
+							latLng: [-23.4, 33], //estimate based on wikipedia
+							name: 'Mozam Example 2',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=36"
+						},
+						{
+							latLng: [-5.4, 35], //estimate based on wikipedia
+							name: 'Tanzania Example 1',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=36"
+						},
+						{
+							latLng: [-6.4, 25], //estimate based on wikipedia
+							name: 'DRC Example 1',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=36"
+						},
+						{
+							latLng: [-10.4, 27], //estimate based on wikipedia
+							name: 'DRC Example 2',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=36"
+						},
+						{
+							latLng: [-16.4, 20], //estimate based on wikipedia
+							name: 'Angola Example 1',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=36"
+						},
+						{
+							latLng: [-10.4, 18], //estimate based on wikipedia
+							name: 'Angola Example 2',
+							weburl: "http://communitymonitors.net/indexcommnet.php/?cat=36"
+						},
+					];
+
+				map = new jvm.Map({
+					container: $('#world-map'),
+					map: 'africa_mill',
+					backgroundColor: 'transparent', //light blue #3595c9
+					regionsSelectable: false,
+					markersSelectable: true,
+					zoomOnScroll: false,
+					zoomButtons: false,
+					panOnDrag: false,
+					markers: markers,
+					markerStyle: {
+						initial: {
+							fill: '#999'
+						},
+						selected: {
+							fill: '#CC00FF'
+						}
+					},
+					regionStyle: {
+						initial: {
+							fill: '#DDD',
+						},
+						hover: {
+							"fill-opacity": 0.8
+						}
+					},
+					regionLabelStyle: {
+						initial: {
+							'font-family': 'Verdana',
+							'font-size': '12',
+							'font-weight': 'bold',
+							cursor: 'default',
+							fill: 'red'
+						},
+						hover: {
+							cursor: 'pointer'
+						}
+					},
+					series: {
+						markers: [{
+							attribute: 'r',
+							scale: [5, 15],
+							values: 1
+						}],
+						regions: [{
+							values: {
+								'AO': red0,
+								'BW': red3,
+								'CD': red3,
+								'LS': red2,
+								'MW': red0,
+								'MZ': red3,
+								'NA': red2,
+								'ZA': red1,
+								'SZ': red0,
+								'TZ': red2,
+								'ZM': red1,
+								'ZW': red0
+							},
+							attribute: 'fill'
+						}]
+					},
+					onMarkerClick: function(events, index) {
+						$(location).attr('href', markers[index].weburl);
+					},
+					onRegionClick: function(e, code) {
+						if (regionInfo[code]) {
+							window.location = regionInfo[code].location;
+						}
+					},
+					onRegionOver: function(event, code) {
+						event.preventDefault();
+						if (activeRegions.indexOf(code) >= 0) {
+							// the hovered region is part of the regionResults, show hand cursor
+							document.body.style.cursor = "pointer";
+						}
+					},
+					onRegionOut: function(e, code) {
+						// return to normal cursor
+						document.body.style.cursor = "default";
+					},
+					onRegionTipShow: function(event, label, code) {
+						if (activeRegions.indexOf(code) == -1)
+							event.preventDefault();
+					}
+				});
+				map.setFocus({
+					scale: 2.1,
+					x: .7,
+					y: .61
+				})
+			});
+		</script>
+	</center>
+	<center>
+		<div id="featured-front">
+			<div class="row">
+				<h2 class="header">FEATURED STORIES</h2>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="http://communitymonitors.net/indexcommnet.php/?p=4384">
+						<img class="featured-image" src="img/boreholes.jpg" width=85%>
+					<h3>Mines Dry up Boreholes in Rustenburg, South Africa</h3>
+					</a>
+				</div>
+				<div class="col-sm-4">
+		<img class="featured-image" src="img/lubumbashi.jpg" width=85%>
+					<h3>L'effusion de rayonnement &#225; Lubumbashi</h3>
+
+				</div>
+				<div class="col-sm-4">
+					<img class="featured-image" src="img/radiation.jpg" width=85%>
+					<h3>Polui&#231;&#227;o da poeira em Tete</h3>
+
+				</div>
+			</div>
+		</div>
+
+
+		<footer>
+			<div class="row">
+				<div class="col-sm-3">
+					<img src="img/TunatazmaEditorialPage.jpg">
+
+				</div>
+				<div class="col-sm-6">
+					<p>Tunatazama is a southern African network of community organisations living near mines. This network is supported by Benchmarks Foundation, Zimbabwe Environment Law Association, and Southern Africa Resource Watch.</p>
+					<div id="sponsors"><img src="img/benchmarks-logo.jpg"><img src="img/zela-logo.png"><img src="img/sawr-logo.png" height="75px"></div>
+				</div>
+				<div class="social-front col-sm-3">
+					<ul>
+					<li><a href="https://www.facebook.com/CommunityMonitorsNetwork"><img src="img/facebook.png" width=50px>Facebook</a></li>
+					<li><a>Other Link #1</a></li>
+					<li><a>Other Link #2</a></li>
+				</ul>
+				</div>
+
+		</footer>
+</body>
+
+</html>
