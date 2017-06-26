@@ -256,6 +256,9 @@ header {
  #featured-front img {
      margin-bottom:15px;
  }
+ #featured-front h2 {
+     padding:10px;
+ }
 
 
 #wrapper-featured {
