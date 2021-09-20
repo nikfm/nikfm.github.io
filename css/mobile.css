@@ -22,12 +22,12 @@ nav ul {
 .toggle {
 	display: block;
 }
-[id^=drop]:checked + ul { 
-display: block; 
+[id^=drop]:checked + ul {
+display: block;
 vertical-align:middle;
 }
 nav label {
-	height:42px;
+	padding: 10px;
 	vertical-align:middle;
 }
 nav .fa {
@@ -44,7 +44,7 @@ nav ul ul {
 	background:#CCC;
 	float: none;
 	position: static;
-	
+
 }
 nav ul li:hover > ul { display: none; }
 
