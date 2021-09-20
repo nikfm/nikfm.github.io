@@ -1,13 +1,13 @@
 document.write('\
 \
 		<nav>\
-    <label for="drop" class="toggle">menu <i class="fa fa-chevron-down" aria-hidden="true"></i></label>\
+    <label for="drop" class="toggle">menu <i class="fa fa-bars" aria-hidden="true"></i></label>\
 	<input type="checkbox" id="drop" />\
 \
 		<ul class="menu">\
 			<li>\
             <label for="drop-1" class="toggle">photography <i class="fa fa-chevron-down" aria-hidden="true"></i></label>\
-            <a href="../">photography</a>\
+            <a href="../">photos</a>\
             <input type="checkbox" id="drop-1"/>\
             	<ul>\
                 	<li><a href="../photos/mono.html">mono</a></li>\
