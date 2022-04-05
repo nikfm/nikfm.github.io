@@ -20,9 +20,12 @@ document.write('\
 			<a>projects</a>\
             <input type="checkbox" id="drop-2"/>\
             	<ul>\
-                	<li><a href="../projects/desert.html">desert designs</a></li>\
+				<li><a href="../projects/circles.html">circle drawings</a></li>\
+					<li><a href="../projects/geometric-abstractions.html">geometric abstractions</a></li>\
+					<li><a href="../projects/100days-illustrator.html">100 days of illustrator</a></li>\
+					<li><a href="../projects/desert.html">desert designs</a></li>\
                     <li><a href="../projects/yarn.html">yarn</a></li>\
-					<li><a href="../projects/100days.html">100 days</a></li>\
+					<li><a href="../projects/100days.html">100 days of code art</a></li>\
                 </ul>\
             </li>\
 			<li><a href="../about.html">about</a></li>\

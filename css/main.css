@@ -151,6 +151,12 @@ a i:hover {
 #about a i:hover {
 	color:#666;
 }
+div {
+	margin-bottom: 25px;
+}
+.index img:hover {
+	opacity: 0.75;
+}
 div .photo {
 
 }
@@ -171,6 +177,28 @@ div .photo p {
 .vertical {
 	max-height:650px;
 	margin:auto;
+}
+div .links {
+	width: 80%;
+	margin: auto;
+}
+div .links div {
+	margin-bottom:40px;
+}
+div .links a {
+	background-color: #333;
+	color: white;
+	padding: 15px 18px;
+	margin: 12px auto 12px auto;
+	text-align: center;
+	display: block;
+}
+div .links a:hover {
+	opacity: 0.75;
+}
+div .links h2 {
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 div .music {
 	width:100%;
