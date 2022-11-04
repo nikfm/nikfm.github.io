@@ -28,7 +28,7 @@ document.write('\
 					<li><a href="../projects/100days.html">100 days of code art</a></li>\
                 </ul>\
             </li>\
-			<li><a href="../about.html">about</a></li>\
+			<li><a href="../design.html">design</a></li>\
             <li><a href="http://niklaspeters.bigcartel.com/" target="_blank">store</a></li>\
 		</ul>\
 	</nav>\
