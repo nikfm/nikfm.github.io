@@ -68,3 +68,19 @@ nav ul ul li {
 	font-size:medium;
 	display:inline-block;
 }
+#designdiv ul {
+	padding-left:0;
+	margin-bottom:5rem;
+}
+#designdiv h3 {
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom:18px;
+	margin-top:18px;
+}
+#designdiv h2 {
+	font-size: 2.5rem;
+}
+#details h2 {
+	font-size:1.5rem;
+}

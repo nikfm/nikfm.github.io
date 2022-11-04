@@ -3,6 +3,7 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
 @import 'https://fonts.googleapis.com/css?family=Josefin+Sans:300';
 
+
 /* definitions */
 header {
 	padding: 20px 20px 25px;
@@ -101,6 +102,7 @@ h2 {
 body {
 	font-family: 'Open Sans', Arial, sans-serif;
 	font-size:15px;
+	margin:0;
 }
 p a {
 	color:#06F;
@@ -135,6 +137,55 @@ a i:hover {
 #social i {
 	float:right;
 }
+#design {
+	text-align:left;
+	background-color: #837cb6;
+	padding-left:40px;
+	margin:0px;
+}
+#designdiv h3 {
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin-bottom:18px;
+	margin-top:18px;
+}
+#designdiv h3 i {
+	color:white;
+}
+#designdiv h4 {
+	font-size: 2rem;
+	margin-bottom: 0;
+}
+#designdiv {
+	text-align: left;
+	margin: 0 auto 0 auto;
+	width:70%;
+	padding:100px 20px;
+}
+#designdiv ul {
+	padding-left: 7rem;
+	margin-bottom:5rem;
+}
+#designdiv li {
+	font-size:1.8rem;
+	list-style:circle;
+	color:white;
+}
+#designdiv h2 {
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 3rem;
+	color:white;
+}
+#designdiv i {
+	color:white;
+}
+#contact {
+	text-align:left;
+	background-color: #7dac6c;
+	padding-left:40px;
+	margin:0px;
+}
+
 #about {
 	text-align:left;
 	max-width:500px;
@@ -212,40 +263,3 @@ form {
 form table {
 	margin:auto;
 }
-
-/*figure {
-
-  display: block;
-  position: relative;
-  overflow: hidden;
-  margin:auto;
-
-  padding-bottom:31px;
-}
-figure .landscape {
-	width:100%;
-}
-figure .vertical {
-	max-height:650px;
-	width:auto;
-}
-
-figcaption {
-  position: absolute;
-  background: rgba(0,0,0,0.25);
-  color:#333;
-  padding: 5px 20px;
-  display:table-caption;
-
-
-  opacity: 1;
-  bottom: 4px;
-  right: 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition:    all 0.5s ease;
-  -o-transition:      all 0.5s ease;
-}
-figure:hover figcaption {
-	opacity:0;
-	right:-30%;
-}*/
