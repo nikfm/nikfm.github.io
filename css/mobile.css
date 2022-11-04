@@ -68,19 +68,30 @@ nav ul ul li {
 	font-size:medium;
 	display:inline-block;
 }
+#designdiv {
+	width: 95%;
+	padding: 30px 10px;
+}
 #designdiv ul {
 	padding-left:0;
-	margin-bottom:5rem;
+	margin-bottom:2rem;
+}
+#designdiv li {
+	font-size: 1.4rem;
 }
 #designdiv h3 {
-	font-size: 2rem;
+	font-size: 1.7rem;
 	font-weight: 600;
 	margin-bottom:18px;
 	margin-top:18px;
 }
 #designdiv h2 {
-	font-size: 2.5rem;
+	font-size: 1.9rem;
+}
+#designdiv h4 {
+	font-size: 1.5rem;
 }
 #details h2 {
-	font-size:1.5rem;
+	font-size:1.2rem;
+	text-align: left;
 }

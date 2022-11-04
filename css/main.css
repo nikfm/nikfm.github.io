@@ -143,6 +143,18 @@ a i:hover {
 	padding-left:40px;
 	margin:0px;
 }
+#contact {
+	text-align:left;
+	background-color: #7dac6c;
+	padding-left:40px;
+	margin:0px;
+}
+#designdiv {
+	text-align: left;
+	margin: 0 auto 0 auto;
+	width:70%;
+	padding:100px 20px;
+}
 #designdiv h3 {
 	font-size: 2.5rem;
 	font-weight: 600;
@@ -156,35 +168,25 @@ a i:hover {
 	font-size: 2rem;
 	margin-bottom: 0;
 }
-#designdiv {
-	text-align: left;
-	margin: 0 auto 0 auto;
-	width:70%;
-	padding:100px 20px;
-}
+
 #designdiv ul {
 	padding-left: 7rem;
-	margin-bottom:5rem;
+	margin-bottom:3.5rem;
 }
 #designdiv li {
 	font-size:1.8rem;
-	list-style:circle;
+	list-style:disc;
 	color:white;
 }
 #designdiv h2 {
 	font-family: 'Open Sans', Arial, sans-serif;
-	font-size: 3rem;
+	font-size: 2.8rem;
 	color:white;
 }
 #designdiv i {
 	color:white;
 }
-#contact {
-	text-align:left;
-	background-color: #7dac6c;
-	padding-left:40px;
-	margin:0px;
-}
+
 
 #about {
 	text-align:left;
